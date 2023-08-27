@@ -1,7 +1,7 @@
 const { instrument } = require("@socket.io/admin-ui");
 const io = require("socket.io")(5000, {
   cors: {
-    origin: ["https://alpha25742.github.io/LegionCode"],
+    origin: ["https://legion-code.vercel.app"],
   },
 });
 
