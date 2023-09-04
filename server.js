@@ -1,7 +1,20 @@
 const { instrument } = require("@socket.io/admin-ui");
+const express = require('express')
+const cors = require('cors')
+const app = express()
+app.listen(3000)
+app.use(cors({
+  origin: ["https://legion-code.vercel.app"],
+  // origin:'*'
+}))
+app.use('/ping',(req,res)=>{
+  res.json({msg:'server is on!'})
+})
+
 const io = require("socket.io")(5000, {
   cors: {
     origin: ["https://legion-code.vercel.app"],
+    // origin: "*",
   },
 });
 
