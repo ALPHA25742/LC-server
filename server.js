@@ -1,4 +1,4 @@
-import { instrument } from "@socket.io/admin-ui";
+const { instrument } = require("@socket.io/admin-ui");
 
 const io = require("socket.io")(5000, {
   cors: {
